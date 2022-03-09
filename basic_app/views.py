@@ -61,6 +61,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 return HttpResponseRedirect(reverse('index'))
+                # return HttpResponse('Logged In')
             else:
                 return HttpResponse('ACCOUNT NOT ACTIVE')
         else:
